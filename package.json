@@ -1,0 +1,23 @@
+{
+    "name": "kef-streamdeck",
+    "description": "unofficial stream deck plugin to control kef speaker",
+    "version": "1.0.0",
+    "keywords": [
+        "kef",
+        "ls50",
+        "ls50w",
+        "streamdeck"
+    ],
+    "scripts": {
+        "build": "pkg app.js && mv app-macos app && mv app-win.exe app.exe && cp app app.exe ~/Library/Application\\ Support/com.elgato.StreamDeck/Plugins/com.patrickdmiller.kef.sdPlugin/ && cp -rf propertyinspector/* ~/Library/Application\\ Support/com.elgato.StreamDeck/Plugins/com.patrickdmiller.kef.sdPlugin/propertyinspector/ && cp manifest.json ~/Library/Application\\ Support/com.elgato.StreamDeck/Plugins/com.patrickdmiller.kef.sdPlugin/",
+        "copyHTML": "cp -rf propertyinspector/* ~/Library/Application\\ Support/com.elgato.StreamDeck/Plugins/com.patrickdmiller.kef.sdPlugin/propertyinspector/",
+        "copyImages": "cp -rf Images/* ~/Library/Application\\ Support/com.elgato.StreamDeck/Plugins/com.patrickdmiller.kef.sdPlugin/Images/",
+        "exportPlugin": "build/DistributionTool -b -i ~/Library/Application\\ Support/com.elgato.StreamDeck/Plugins/com.patrickdmiller.kef.sdPlugin -o build/Release/"
+    },
+    "dependencies": {
+        "args": "",
+        "simple-node-logger": "",
+        "websocket": "",
+        "kef-wireless-js": ""
+    }
+}

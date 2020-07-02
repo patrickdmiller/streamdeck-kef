@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>KEF</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="sdpi-wrapper">
+        <div class="sdpi-item">
+            <div class="sdpi-item-label">Speaker IP</div>
+            <input class="sdpi-item-value user-defined" data-param="clientAddress" id="clientAddress" value=""
+                placeholder="1.2.3.4" required pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}" )">
+        </div>
+
+        <div class="sdpi-heading">Status</div>
+        <div class="sdpi-item status">
+            <div class="sdpi-item-label">Connected</div>
+            <input class="sdpi-item-value" id="connected" value="unknown" disabled>
+        </div>
+
+        <div class="sdpi-item status">
+            <div class="sdpi-item-label">Volume</div>
+            <input type="range" min="0" max="100" class="sdpi-item-value" id="volume" value="0.0" disabled></meter>
+        </div>
+
+        <div class="sdpi-item status">
+            <div class="sdpi-item-label">Source</div>
+            <input class="sdpi-item-value" id="source" value="unknown" disabled>
+        </div>
+
+        <div class="sdpi-item status">
+            <div class="sdpi-item-label">Muted</div>
+            <input class="sdpi-item-value" id="muted" value="unknown" disabled>
+        </div>
+
+        <div class="sdpi-item status">
+            <div class="sdpi-item-label">DEBUG</div>
+            <input class="sdpi-item-value" id="Address" value=""
+                onchange="sendValueToPlugin(event.target.value, 'address')">
+        </div>
+    </div>
+    <script src="js/kef.js" defer></script>
+</body>
+<script src="js/jquery.min.js"></script>
+
+</html>
