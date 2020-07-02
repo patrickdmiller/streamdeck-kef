@@ -9,3 +9,7 @@ Uses a global settings object to store the IP of the speakers. If you set 1 butt
 # Structure
 
 The plugin is a compiled node.js application since opening a socket is required. Binary is compiled using the pkg package.
+
+# Download  
+
+[Link to plugin (macOs)](https://github.com/patrickdmiller/streamdeck-kef/releases/download/v1.0/com.patrickdmiller.kef.streamDeckPlugin)
