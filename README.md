@@ -12,4 +12,4 @@ The plugin is a compiled node.js application since opening a socket is required.
 
 # Download  
 
-[Link to plugin (macOs)](https://github.com/patrickdmiller/streamdeck-kef/releases/download/v1.0/com.patrickdmiller.kef.streamDeckPlugin)
+[Link to plugin (macOs)](https://github.com/patrickdmiller/streamdeck-kef/releases/download/1.0.1/com.patrickdmiller.kef.streamDeckPlugin)
