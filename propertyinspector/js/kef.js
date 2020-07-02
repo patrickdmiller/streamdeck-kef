@@ -1,4 +1,5 @@
-$(function () {
+
+$( document ).ready(function() {
     let websocket = null;
     let uuid = null;
     let actionInfo = {};
@@ -34,32 +35,26 @@ $(function () {
                 if (jsonObj && jsonObj.event == 'sendToPropertyInspector' && jsonObj.payload) {
                     //if it's settings with client address inside
                     if (jsonObj.payload.settings && jsonObj.payload.settings.clientAddress) {
-                        const addressSelector = document.getElementById("clientAddress");
-                        addressSelector.value = jsonObj.payload.settings.clientAddress
+                        $('#clientAddress').val(jsonObj.payload.settings.clientAddress);
                     }else if (jsonObj.payload.kef) {
                     //if it's state
                     // this is what the object looks like . {"kef":{"muted":false,"onoff":1,"socketState":"socket:connect","source":"AUX","volume":46}}}
                     
                         if (jsonObj.payload.kef.hasOwnProperty('socketState')) {
-                            let e = document.getElementById('connected')
-                            e.value = jsonObj.payload.kef.socketState;
+                            $('#connected').val(jsonObj.payload.kef.socketState);
                             setConnectionState(jsonObj.payload.kef.socketState == 'socket:connect')
                         }
 
                         if (jsonObj.payload.kef.hasOwnProperty('volume')) {
-                            let e = document.getElementById('volume');
-                            e.value = jsonObj.payload.kef.volume;
+                            $('#volume').val(jsonObj.payload.kef.volume);
                         }
 
                         if (jsonObj.payload.kef.hasOwnProperty('source')) {
-                            let e = document.getElementById('source')
-                            e.value = jsonObj.payload.kef.source;
+                            $('#source').val(jsonObj.payload.kef.source);
                         }
 
                         if (jsonObj.payload.kef.hasOwnProperty('muted')) {
-
-                            let e = document.getElementById('muted')
-                            e.value = jsonObj.payload.kef.muted;
+                            $('#muted').val(jsonObj.payload.kef.muted);
                         }
                     } else if (jsonObj.payload.connect!==null){
 
@@ -67,10 +62,7 @@ $(function () {
                         
                     
                     } else {
-                    //otherwise just show it in debug
-                        const value = JSON.stringify(jsonObj.payload)
-                        const addressSelector = document.getElementById("Address");
-                        addressSelector.value = value
+                        $('#debug').val(JSON.stringify(jsonObj.payload));
                     }
                 }
             }
