@@ -1,6 +1,6 @@
 # KEF Streamdeck Plugin - UNOFFICIAL
 
-Works on mac. Currently not working for windows - i'll figure it out soon
+Tested on mac and partially on Windows 10. Windows didn't let it open the socket until i ran the streamdeck app as Administrator (right click > run as Administrator)
 
 Uses a global settings object to store the IP of the speakers. If you set 1 button's IP, they're all set. 
 
