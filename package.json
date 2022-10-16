@@ -11,7 +11,7 @@
     "scripts": {
         "build-win": "npm run cleanRelease && npm run pkg && npm run copyApp-win && npm run copyHTML-win && npm run copyImages-win && npm run exportPlugin-win",
         "build-mac": "npm run cleanRelease && npm run pkg && npm run copyApp-mac && npm run copyHTML-mac && npm run copyImages-mac && npm run exportPlugin-mac",
-        "cleanRelease": "rm ./build/Release/*",
+        "cleanRelease": "rm -f ./build/Release/*",
         "pkg": "pkg app.js && mv app-macos app && mv app-win.exe app.exe",
         "copyApp-mac": "cp app app.exe ~/Library/Application\\ Support/com.elgato.StreamDeck/Plugins/com.patrickdmiller.kef.sdPlugin/ && cp -rf propertyinspector/* ~/Library/Application\\ Support/com.elgato.StreamDeck/Plugins/com.patrickdmiller.kef.sdPlugin/propertyinspector/ && cp manifest-mac.json ~/Library/Application\\ Support/com.elgato.StreamDeck/Plugins/com.patrickdmiller.kef.sdPlugin/manifest.json",
         "copyApp-win": "cp app app.exe ./com.patrickdmiller.kef.sdPlugin/ && cp -rf propertyinspector/* ./com.patrickdmiller.kef.sdPlugin/propertyinspector/ && cp manifest-win.json ./com.patrickdmiller.kef.sdPlugin/manifest.json",
