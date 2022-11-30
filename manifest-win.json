@@ -1,0 +1,133 @@
+{
+  "Name": "KEF Speaker",
+  "Version": "1.0.0",
+  "Description": "Control Kef Speakers UNOFFICIAL",
+  "Author": "github.com/patrickdmiller",
+  "Icon": "Images/keflogo",
+  "CodePath": "app.exe",
+  "SDKVersion": 2,
+  "Category": "KEF Speaker",
+  "CategoryIcon": "Images/keflogo",
+  "Actions": [
+    {
+      "Icon": "Images/power_action",
+      "SupportedInMultiActions": false,
+      "Name": "Power",
+      "PropertyInspectorPath": "propertyinspector/kef.html",
+      "States": [
+        {
+          "Name": "String",
+          "Image": "Images/power",
+          "FontSize": "11",
+          "FontStyle": "Bold",
+          "TitleAlignment": "bottom",
+          "TitleColor": "#ffffff"
+        },
+        {
+          "Name": "String",
+          "Image": "Images/power_on",
+          "FontSize": "11",
+          "FontStyle": "Bold",
+          "TitleAlignment": "bottom",
+          "TitleColor": "#ffffff"
+        }
+      ],
+      "Tooltip": "Turn Speakers On or Off",
+      "UUID": "com.patrickdmiller.kef.power"
+    },
+    {
+      "Icon": "Images/mute_action",
+      "SupportedInMultiActions": false,
+      "Name": "Mute",
+      "PropertyInspectorPath": "propertyinspector/kef.html",
+      "States": [
+        {
+          "Name": "String",
+          "Image": "Images/mute",
+          "FontSize": "13",
+          "FontStyle": "Bold",
+          "TitleAlignment": "middle",
+          "TitleColor": "#ffffff"
+        },
+        {
+
+          "Name": "String",
+          "Image": "Images/unmute",
+          "FontSize": "13",
+          "FontStyle": "Bold",
+          "TitleAlignment": "middle",
+          "TitleColor": "#ffffff"
+        }
+      ],
+      "Tooltip": "Mute the speaker",
+      "UUID": "com.patrickdmiller.kef.mute"
+    },
+    {
+      "Icon": "Images/vol_up_action",
+      "SupportedInMultiActions": false,
+      "Name": "Volume Up",
+      "PropertyInspectorPath": "propertyinspector/kef.html",
+      "States": [
+        {
+          "Name": "String",
+          "Image": "Images/vol_up",
+          "FontSize": "13",
+          "FontStyle": "Bold",
+          "TitleAlignment": "middle",
+          "TitleColor": "#ffffff"
+        }
+      ],
+      "Tooltip": "Turn Up the Volume",
+      "UUID": "com.patrickdmiller.kef.volup"
+    },
+    {
+      "Icon": "Images/vol_down_action",
+      "SupportedInMultiActions": false,
+      "Name": "Volume Down",
+      "PropertyInspectorPath": "propertyinspector/kef.html",
+      "States": [
+        {
+          "Name": "String",
+          "Image": "Images/vol_down",
+          "FontSize": "13",
+          "FontStyle": "Bold",
+          "TitleAlignment": "middle",
+          "TitleColor": "#ffffff"
+        }
+      ],
+      "Tooltip": "Turn Up the Volume",
+      "UUID": "com.patrickdmiller.kef.voldown"
+    },
+    {
+      "Icon": "Images/source_action",
+      "SupportedInMultiActions": false,
+      "Name": "Source",
+      "PropertyInspectorPath": "propertyinspector/kef.html",
+      "States": [
+        {
+          "Name": "String",
+          "Image": "Images/source",
+          "FontSize": "10",
+          "FontStyle": "Regular",
+          "TitleAlignment": "bottom",
+          "TitleColor": "#ffffff"
+        }
+      ],
+      "Tooltip": "Cycle the Source",
+      "UUID": "com.patrickdmiller.kef.source"
+    }
+  ],
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "10.14"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Software": {
+    "MinimumVersion": "4.1"
+  }
+}
