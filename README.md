@@ -1,4 +1,4 @@
-# KEF Streamdeck Plugin - UNOFFICIAL
+# KEF LS50 Streamdeck
 
 Tested on mac and partially on Windows 10. 
 **Windows Note** Windows didn't let it open the socket until i ran the streamdeck app as Administrator (right click > run as Administrator). I'm not versed in windows dev, so if there's a better way to correct this please let me know. 
@@ -14,3 +14,6 @@ The plugin is a compiled node.js application since opening a socket is required.
 # Download  
 
 [Link to plugin (macOs)](https://github.com/patrickdmiller/streamdeck-kef/releases/download/1.0.1/com.patrickdmiller.kef.streamDeckPlugin)
+
+# Compatibility
+Has been tested on LS50v1 - likely does not work on LSX
